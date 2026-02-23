@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        moveDir = new Vector3(x * playerSpeed, gravForce, z * playerSpeed);
+        moveDir = new Vector3 (x * playerSpeed, gravForce, z * playerSpeed);
         characterController.Move(moveDir * Time.deltaTime);
     }
 }

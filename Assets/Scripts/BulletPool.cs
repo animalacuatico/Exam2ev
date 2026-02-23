@@ -26,7 +26,9 @@ public class BulletPool : MonoBehaviour
     }
     public GameObject GetFromPool(Vector3 position, Quaternion rotation)
     {
-        GameObject obj = null; if (pool.Count > 0)
+        GameObject obj = null;
+
+        if (pool.Count > 0)
         {
             obj = pool.Dequeue();
         }
@@ -36,7 +38,19 @@ public class BulletPool : MonoBehaviour
         }
         if (obj == null)
         {
-            return obj;
+            return null;
         }
+        obj.transform.SetPositionAndRotation(position, rotation);
+        obj.SetActive(true);
+        return obj;
+    }
+    public void ReturnToPool(GameObject obj)
+    {
+        if (obj == null)
+        {
+            return;
+        }
+        obj.SetActive(false);
+        pool.Enqueue(obj);
     }
 }
