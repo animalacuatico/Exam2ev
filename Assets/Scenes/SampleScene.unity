@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 1040560338}
   - component: {fileID: 1040560337}
   - component: {fileID: 1040560336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -875,14 +875,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 5
-  gravForce: -9
-  characterController: {fileID: 0}
+  sprintSpeed: 10
+  jumpForce: 8
+  gravity: -9.81
+  mouseSensitivity: 2
+  characterController: {fileID: 1805244206}
+  groundCheck: {fileID: 1040560339}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  groundDistance: 0.4
   isMobile: 0
+--- !u!143 &1805244206 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 3958883510832442310, guid: d0876a0bd14ef784b9f05d4366469bf9, type: 3}
+  m_PrefabInstance: {fileID: 2263852122853316969}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1805244211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 999988871466719376, guid: d0876a0bd14ef784b9f05d4366469bf9, type: 3}
   m_PrefabInstance: {fileID: 2263852122853316969}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1860354344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 294081458653819131, guid: d0876a0bd14ef784b9f05d4366469bf9, type: 3}
+  m_PrefabInstance: {fileID: 2263852122853316969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1860354345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9109210799109497189, guid: d0876a0bd14ef784b9f05d4366469bf9, type: 3}
+  m_PrefabInstance: {fileID: 2263852122853316969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1860354349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860354344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18b93cd03bbf834194b5baf99129436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 1353913692}
+  playerGafas: {fileID: 1860354345}
+  bulletSpeed: 5
 --- !u!4 &2114829861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1691836291596228145, guid: b56ac3b4adb08434eb96af7c22925f37, type: 3}
@@ -972,6 +1010,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7536707843644162910, guid: d0876a0bd14ef784b9f05d4366469bf9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1805244205}
+    - targetCorrespondingSourceObject: {fileID: 294081458653819131, guid: d0876a0bd14ef784b9f05d4366469bf9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1860354349}
     - targetCorrespondingSourceObject: {fileID: 2508188270777323249, guid: d0876a0bd14ef784b9f05d4366469bf9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 963194229}
