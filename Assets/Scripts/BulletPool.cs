@@ -7,7 +7,7 @@ public class BulletPool : MonoBehaviour
     public static BulletPool Instance { get; private set; }
     public GameObject poolPrefab;
     public int initialSize = 3;
-    public bool expandIfEmpty = true;
+    public bool expandIfEmpty = false;
     private readonly Queue<GameObject> pool = new Queue<GameObject>();
     private void Awake()
     {

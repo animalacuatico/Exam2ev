@@ -6,12 +6,6 @@ public class PlayerShoot : MonoBehaviour
 {
     public BulletPool pool;
     public Transform playerGafas;
-    public float bulletSpeed = 5f;
-
-    private void Start()
-    {
-        timer = Time.deltaTime;
-    }
     private void Update()
     {
         if (Input.GetMouseButton(0))

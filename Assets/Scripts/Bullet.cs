@@ -11,8 +11,6 @@ public class Bullet : MonoBehaviour
     private void OnEnable()
     {
         deathTimer = 0f;
-        float x = 5;
-        bulletDirection = new Vector3(x * bulletSpeed, 0, 0);
     }
     private void Update()
     {
